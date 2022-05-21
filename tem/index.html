@@ -8,11 +8,21 @@
 </head>
 <body>
   
-    <form action="/removepun" method="get">
-         <textarea name="atext" id="" cols="30" rows="10"></textarea>
-         <input type="checkbox" name="analyzetext" id="">
-         <input type="checkbox" name="capatalize" id="">
-         <button>analyze text</button>
+    <form action="/analyzetext" method="get">
+        <h1> Enter text to Analyze it</h1>
+        <pre>
+        <textarea name="atext" id="" cols="20" rows="5"></textarea>
+         <br>
+       remove punctuation   <input type="checkbox" name="analyzetext" id="">
+        <br>
+       capatalize all text  <input type="checkbox" name="capatalize" id="">
+       <br>
+       first letter cap     <input type="checkbox" name="firstcap" id="">
+       <br>
+       <hr>
+     <button >analyze text</button>
+        </pre>
+         
 
     </form>
 </body>

@@ -20,10 +20,7 @@ from .import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name= "index"),
-    path('about',views.about),
-    path('removepun',views.removepun),
-    path('capfirst',views.capfirst),
-    path('spaceremove',views.spaceremove),
-    path('charcount',views.charcount)
+    path('analyzetext',views.removepun),
+   
     
 ]

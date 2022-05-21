@@ -17,10 +17,10 @@ def removepun(req):
     checkpun = req.GET.get('analyzetext','of')
     check_cap = req.GET.get('capatalize','of')
     dtext = req.GET.get('atext','of')
+    firstcap = req.GET.get('firstcap','of')
     print(dtext)
     final_text = ""
     if(checkpun =="on"):
-         
          punclist = ''' ":;'"/.#@$%^&*! '''
          final_text = ""
          for words in dtext:
@@ -32,8 +32,10 @@ def removepun(req):
          for words in dtext:
             final_text = final_text+ words.upper()
          return render(req,'removepun.html',{'text':final_text})
-         
-
+     
+    elif(firstcap == 'on'):
+         a = dtext[:1].upper()
+         return render(req,'removepun.html',{'text':a})
     else:
         return HttpResponse("check box was not clicked")
    
